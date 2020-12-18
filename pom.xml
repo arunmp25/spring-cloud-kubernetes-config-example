@@ -5,12 +5,12 @@
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>2.2.1.RELEASE</version>
+		<version>2.3.5.RELEASE</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.techprimers.kubernetes</groupId>
 	<artifactId>spring-cloud-kubernetes-config-example</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>0.0.6-SNAPSHOT</version>
 	<name>spring-cloud-kubernetes-config-example</name>
 	<description>Demo project for Spring Boot</description>
 
@@ -30,8 +30,7 @@
 
 		<dependency>
 			<groupId>org.springframework.cloud</groupId>
-			<artifactId>spring-cloud-starter-kubernetes-config</artifactId>
-			<version>1.1.0.RELEASE</version>
+			<artifactId>spring-cloud-starter-kubernetes-all</artifactId>
 		</dependency>
 
 		<dependency>
@@ -46,7 +45,19 @@
 			</exclusions>
 		</dependency>
 	</dependencies>
+<dependencyManagement>
+	<dependencies>
+		<!-- https://mvnrepository.com/artifact/org.springframework.cloud/spring-cloud-dependencies -->
+		<dependency>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-dependencies</artifactId>
+			<version>Hoxton.SR9</version>
+			<type>pom</type>
+			<scope>import</scope>
+		</dependency>
 
+	</dependencies>
+</dependencyManagement>
 	<build>
 		<plugins>
 			<plugin>

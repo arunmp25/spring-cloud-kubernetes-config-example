@@ -1,7 +1,8 @@
-kind: Service
 apiVersion: v1
+kind: Service
 metadata:
   name: config-example
+  namespace: uwbdev
 spec:
   selector:
     app: config-example
@@ -15,6 +16,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: config-example
+  namespace: uwbdev
 spec:
   selector:
     matchLabels:
@@ -27,7 +29,7 @@ spec:
     spec:
       containers:
         - name: config-example
-          image: config-example
-          imagePullPolicy: Never
+          image: arunmp/config-example:0.0.6-SNAPSHOT
+          imagePullPolicy: Always
           ports:
             - containerPort: 8080

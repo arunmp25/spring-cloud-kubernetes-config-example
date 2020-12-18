@@ -1,16 +1,12 @@
 logging.level.org.springframework.cloud.kubernetes: DEBUG
+spring.application.name: config-example
 spring:
   cloud:
     kubernetes:
       discovery:
-        enabled: false
+        enabled: true
       loadbalancer:
-        enabled: false
-spring.application.name: config-example
-welcome:
- message : Welcome from local
-message: Local message in the Controller
-secretMessage: The local Secret
+        enabled: true
 management:
   endpoints:
     web:

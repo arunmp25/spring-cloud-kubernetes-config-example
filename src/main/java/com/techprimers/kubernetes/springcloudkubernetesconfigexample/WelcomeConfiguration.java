@@ -7,7 +7,7 @@ import org.springframework.context.annotation.Configuration;
 @Configuration
 public class WelcomeConfiguration {
 
-    private String message = "Welcome to TechPrimers";
+    private String message = "Default Welcome to TechPrimers";
 
     public String getMessage() {
         return message;

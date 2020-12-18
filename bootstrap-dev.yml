@@ -1,0 +1,14 @@
+#spring:
+#  profiles: dev
+#  cloud:
+#    kubernetes:
+#      config:
+#        enabled: true
+#        name: uwb-config
+#        namespace: uwbdev
+#      secrets:
+#        enable-api: true
+#        namespace: uwbdev
+#        sources:
+#          - name: uwb-secret
+#          - name: uwb-another-secret
